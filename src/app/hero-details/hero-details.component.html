@@ -1,7 +1,11 @@
-  <h2>{{ selectedHero.name | uppercase }} Details</h2>
-  <div><span>id: </span> {{ selectedHero.id }} </div>
-  <div>
-    <label>name:
-      <input type="text" name="hero" [(ngModel)]="selectedHero.name" placeholder="Name" >
-    </label>
+  <div *ngIf="selectedHero">
+    <h2>{{ selectedHero.name | uppercase }} Details</h2>
+    <div><span>id: </span> {{ selectedHero.id }} </div>
+    <div>
+      <label>name:
+        <input type="text" name="hero" [(ngModel)]="selectedHero.name" placeholder="Name" >
+      </label>
+    </div>
+    <button (click)="save()">save</button>
+    <button (click)="goBack()">go back</button>
   </div>

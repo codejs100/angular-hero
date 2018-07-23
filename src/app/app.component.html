@@ -1,3 +1,7 @@
 <h1>{{ title }}</h1>
-<ang-heros></ang-heros>
-<ang-messages></ang-messages>
+<nav>
+    <!-- <a [routerLink]="['heroes']">Heroes</a> -->
+    <a routerLink="dashboard">Dashboard</a>
+    <a routerLink="heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
